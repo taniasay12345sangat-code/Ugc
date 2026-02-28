@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UGC Creator Portfolio | Tech, Skincare, Travel & Fashion Content</title>
+<meta name="description" content="UGC Creator & Influencer Portfolio — Authentic content for tech products, skincare brands, travel & hotels, and fashion. Open for brand collaborations, partnerships, and paid campaigns.">
+<meta name="keywords" content="UGC creator, user generated content, influencer for hire, brand collaboration, tech reviewer, skincare content creator, travel influencer, fashion creator, ugc portfolio, content creator for brands, influencer marketing, ugc video creator, sponsored content">
+<meta property="og:title" content="UGC Creator Portfolio | Authentic Content That Converts">
+<meta property="og:description" content="I create content that stops the scroll and drives real results. Open for tech, skincare, travel, and fashion brand collabs.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://yourdomain.com">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --black: #0a0a0a;
+    --white: #f5f0e8;
+    --cream: #ede8dc;
+    --accent: #c8a96e;
+    --accent2: #e07b5a;
+    --muted: #7a7468;
+    --card-bg: #141414;
+    --border: rgba(200,169,110,0.2);
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+    cursor: default;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; width: 100%; z-index: 999;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.2rem 4vw;
+    background: rgba(10,10,10,0.85);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    text-transform: uppercase;
+  }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    color: var(--white); text-decoration: none;
+    font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;
+    opacity: 0.7; transition: opacity 0.2s, color 0.2s;
+  }
+  .nav-links a:hover { opacity: 1; color: var(--accent); }
+  .nav-cta {
+    background: var(--accent); color: var(--black) !important;
+    padding: 0.5rem 1.2rem; border-radius: 2px;
+    opacity: 1 !important; font-weight: 500;
+  }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+  .hamburger span { width: 24px; height: 1.5px; background: var(--white); display: block; transition: 0.3s; }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 10rem 4vw 6rem;
+    position: relative; overflow: hidden;
+  }
+  .hero-noise {
+    position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none; z-index: 0;
+  }
+  .hero-tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.72rem; letter-spacing: 0.25em; color: var(--accent);
+    text-transform: uppercase; margin-bottom: 1.5rem;
+    animation: fadeUp 0.8s ease both;
+  }
+  .hero-h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3.5rem, 9vw, 8rem);
+    line-height: 0.95; font-weight: 900;
+    max-width: 900px;
+    animation: fadeUp 0.8s 0.1s ease both;
+  }
+  .hero-h1 em { color: var(--accent); font-style: italic; }
+  .hero-sub {
+    margin-top: 2rem; max-width: 560px;
+    font-size: 1.05rem; line-height: 1.7; opacity: 0.7;
+    animation: fadeUp 0.8s 0.2s ease both;
+  }
+  .hero-btns {
+    display: flex; gap: 1rem; margin-top: 3rem; flex-wrap: wrap;
+    animation: fadeUp 0.8s 0.3s ease both;
+  }
+  .btn-primary {
+    background: var(--accent); color: var(--black);
+    padding: 1rem 2.5rem; font-weight: 500; border: none;
+    font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase;
+    cursor: pointer; text-decoration: none; display: inline-block;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(200,169,110,0.3); }
+  .btn-outline {
+    border: 1px solid rgba(245,240,232,0.3); color: var(--white);
+    padding: 1rem 2.5rem; font-size: 0.85rem; letter-spacing: 0.1em;
+    text-transform: uppercase; cursor: pointer; text-decoration: none;
+    display: inline-block; transition: border-color 0.2s, color 0.2s;
+  }
+  .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+  .hero-stats {
+    display: flex; gap: 4rem; margin-top: 5rem;
+    animation: fadeUp 0.8s 0.4s ease both;
+  }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem; font-weight: 700; color: var(--accent);
+  }
+  .stat-label { font-size: 0.75rem; opacity: 0.5; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 0.3rem; }
+  .hero-scroll-hint {
+    position: absolute; bottom: 2.5rem; left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Space Mono', monospace; font-size: 0.65rem;
+    letter-spacing: 0.2em; opacity: 0.4; text-transform: uppercase;
+    animation: bounce 2s infinite;
+  }
+  @keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(6px)} }
+
+  /* ── MARQUEE ── */
+  .marquee-wrap {
+    overflow: hidden; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+    padding: 1rem 0; background: var(--card-bg);
+  }
+  .marquee-track {
+    display: flex; gap: 4rem; white-space: nowrap;
+    animation: marquee 20s linear infinite;
+    font-family: 'Space Mono', monospace; font-size: 0.75rem;
+    letter-spacing: 0.15em; color: var(--accent); text-transform: uppercase;
+  }
+  .marquee-sep { opacity: 0.3; }
+  @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+  /* ── SECTION BASE ── */
+  section { padding: 7rem 4vw; }
+  .section-tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem; letter-spacing: 0.25em; color: var(--accent);
+    text-transform: uppercase; margin-bottom: 1rem;
+  }
+  .section-h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.2rem, 5vw, 4.2rem);
+    font-weight: 900; line-height: 1.05;
+  }
+  .section-h2 em { color: var(--accent); font-style: italic; }
+  .section-sub {
+    margin-top: 1.2rem; font-size: 1rem; opacity: 0.6; max-width: 540px; line-height: 1.8;
+  }
+
+  /* ── ABOUT ── */
+  #about { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+  .about-img-wrap {
+    position: relative; aspect-ratio: 3/4; overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  .about-img-placeholder {
+    width: 100%; height: 100%; background: var(--card-bg);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Space Mono', monospace; font-size: 0.75rem;
+    color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase;
+    flex-direction: column; gap: 1rem;
+  }
+  .about-img-placeholder .img-icon { font-size: 3rem; opacity: 0.3; }
+  .about-corner {
+    position: absolute; bottom: 1.5rem; right: 1.5rem;
+    background: var(--accent); color: var(--black);
+    font-family: 'Space Mono', monospace; font-size: 0.65rem;
+    padding: 0.5rem 1rem; letter-spacing: 0.1em; text-transform: uppercase;
+  }
+  .about-text p { line-height: 1.85; opacity: 0.7; margin-bottom: 1.2rem; font-size: 1rem; }
+  .about-text p strong { color: var(--accent); font-weight: 500; opacity: 1; }
+  .skills-list { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 2rem; }
+  .skill-tag {
+    border: 1px solid var(--border); padding: 0.4rem 0.9rem;
+    font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--muted); transition: 0.2s;
+  }
+  .skill-tag:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* ── PORTFOLIO CATEGORIES ── */
+  #portfolio { background: var(--card-bg); }
+  .portfolio-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; margin-top: 4rem; background: var(--border); }
+  .category-card {
+    background: var(--card-bg); padding: 3.5rem; position: relative;
+    overflow: hidden; transition: background 0.3s; cursor: pointer;
+    display: flex; flex-direction: column; min-height: 380px;
+  }
+  .category-card::before {
+    content: ''; position: absolute; bottom: 0; left: 0;
+    width: 100%; height: 3px; background: var(--accent);
+    transform: scaleX(0); transform-origin: left; transition: transform 0.4s;
+  }
+  .category-card:hover::before { transform: scaleX(1); }
+  .category-card:hover { background: #1a1a1a; }
+  .cat-num {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem; letter-spacing: 0.2em; color: var(--accent); margin-bottom: auto;
+  }
+  .cat-icon { font-size: 2.5rem; margin-bottom: 1.5rem; }
+  .cat-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem; font-weight: 700; margin-bottom: 1rem; line-height: 1.1;
+  }
+  .cat-desc { font-size: 0.9rem; opacity: 0.55; line-height: 1.8; max-width: 340px; }
+  .cat-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1.5rem; }
+  .cat-tag {
+    background: rgba(200,169,110,0.1); color: var(--accent);
+    font-size: 0.68rem; padding: 0.3rem 0.8rem; letter-spacing: 0.1em;
+    text-transform: uppercase; font-family: 'Space Mono', monospace;
+  }
+  .cat-arrow {
+    position: absolute; bottom: 2.5rem; right: 2.5rem;
+    font-size: 1.5rem; color: var(--accent); opacity: 0;
+    transform: translateX(-10px); transition: 0.3s;
+  }
+  .category-card:hover .cat-arrow { opacity: 1; transform: translateX(0); }
+
+  /* Portfolio Work Samples */
+  .work-samples { margin-top: 4rem; }
+  .work-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+  .work-card {
+    aspect-ratio: 4/5; background: var(--card-bg); border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden; cursor: pointer;
+    transition: border-color 0.3s;
+  }
+  .work-card:hover { border-color: var(--accent); }
+  .work-placeholder {
+    display: flex; flex-direction: column; align-items: center; gap: 0.8rem;
+    font-family: 'Space Mono', monospace; font-size: 0.65rem;
+    color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase;
+  }
+  .work-placeholder .icon { font-size: 2rem; }
+  .work-overlay {
+    position: absolute; inset: 0; background: rgba(200,169,110,0.95);
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; transition: opacity 0.3s;
+    color: var(--black); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .work-card:hover .work-overlay { opacity: 1; }
+
+  /* ── FAQ / SEO SECTION ── */
+  #faq { border-top: 1px solid var(--border); }
+  .faq-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; margin-bottom: 4rem; align-items: start; }
+  .faq-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); }
+  .faq-item { border-bottom: 1px solid var(--border); }
+  .faq-q {
+    width: 100%; padding: 1.8rem 2rem; text-align: left;
+    background: none; border: none; color: var(--white);
+    font-family: 'DM Sans', sans-serif; font-size: 1rem;
+    display: flex; justify-content: space-between; align-items: center;
+    cursor: pointer; gap: 1rem; transition: color 0.2s;
+  }
+  .faq-q:hover { color: var(--accent); }
+  .faq-q .faq-icon { color: var(--accent); font-size: 1.2rem; flex-shrink: 0; transition: transform 0.3s; }
+  .faq-a {
+    max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s;
+    padding: 0 2rem; font-size: 0.9rem; opacity: 0.65; line-height: 1.8;
+  }
+  .faq-item.open .faq-a { max-height: 300px; padding: 0 2rem 1.8rem; }
+  .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+  /* ── BRANDS ── */
+  #brands { background: #0d0d0d; }
+  .brands-note {
+    font-family: 'Space Mono', monospace; font-size: 0.7rem;
+    letter-spacing: 0.15em; color: var(--muted); margin-top: 1rem; text-transform: uppercase;
+  }
+  .brands-grid {
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px;
+    margin-top: 3rem; background: var(--border);
+  }
+  .brand-slot {
+    background: var(--card-bg); aspect-ratio: 2/1;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Space Mono', monospace; font-size: 0.65rem;
+    color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase;
+    border: 1px solid transparent; transition: 0.2s;
+  }
+  .brand-slot:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* ── SOCIAL PROOF ── */
+  #social-proof { text-align: center; padding: 6rem 4vw; }
+  .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 4rem; }
+  .testi-card {
+    background: var(--card-bg); border: 1px solid var(--border);
+    padding: 2.5rem; text-align: left; position: relative;
+  }
+  .testi-card::before {
+    content: '"'; font-family: 'Playfair Display', serif;
+    font-size: 5rem; color: var(--accent); opacity: 0.2;
+    position: absolute; top: 0.5rem; left: 1.5rem; line-height: 1;
+  }
+  .testi-text { font-size: 0.9rem; line-height: 1.8; opacity: 0.7; margin-bottom: 1.5rem; }
+  .testi-author { font-family: 'Space Mono', monospace; font-size: 0.7rem; color: var(--accent); letter-spacing: 0.1em; }
+
+  /* ── SOCIAL LINKS ── */
+  #socials { border-top: 1px solid var(--border); padding: 5rem 4vw; }
+  .social-wrap { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 3rem; }
+  .social-btn {
+    display: flex; align-items: center; gap: 0.7rem;
+    border: 1px solid var(--border); padding: 0.9rem 1.5rem;
+    color: var(--white); text-decoration: none;
+    font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;
+    transition: 0.3s; font-family: 'DM Sans', sans-serif;
+  }
+  .social-btn:hover { border-color: var(--accent); color: var(--accent); background: rgba(200,169,110,0.05); }
+  .social-btn svg { width: 18px; height: 18px; fill: currentColor; }
+
+  /* ── NEWSLETTER ── */
+  #newsletter {
+    background: var(--accent); color: var(--black);
+    padding: 6rem 4vw; text-align: center;
+  }
+  #newsletter .section-tag { color: var(--black); opacity: 0.5; }
+  #newsletter .section-h2 { color: var(--black); }
+  #newsletter .section-h2 em { color: rgba(10,10,10,0.5); }
+  #newsletter .section-sub { color: var(--black); opacity: 0.65; margin: 0 auto; }
+  .newsletter-form {
+    display: flex; gap: 0; max-width: 520px; margin: 2.5rem auto 0;
+    border: 2px solid var(--black);
+  }
+  .newsletter-form input {
+    flex: 1; padding: 1.1rem 1.5rem; background: transparent;
+    border: none; outline: none; color: var(--black);
+    font-size: 0.9rem; font-family: 'DM Sans', sans-serif;
+  }
+  .newsletter-form input::placeholder { color: rgba(10,10,10,0.4); }
+  .newsletter-form button {
+    background: var(--black); color: var(--accent);
+    padding: 1.1rem 2rem; border: none; cursor: pointer;
+    font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;
+    font-family: 'DM Sans', sans-serif; white-space: nowrap;
+    transition: background 0.2s;
+  }
+  .newsletter-form button:hover { background: #222; }
+  .newsletter-note { margin-top: 1rem; font-size: 0.75rem; opacity: 0.5; }
+
+  /* ── CONTACT ── */
+  #contact { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; }
+  .contact-info p { font-size: 0.95rem; opacity: 0.65; line-height: 1.8; margin-bottom: 2rem; }
+  .contact-detail {
+    display: flex; flex-direction: column; gap: 0.2rem;
+    font-family: 'Space Mono', monospace; font-size: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  .contact-detail span:first-child { color: var(--accent); letter-spacing: 0.15em; text-transform: uppercase; font-size: 0.65rem; }
+  .contact-detail a { color: var(--white); text-decoration: none; }
+  .contact-detail a:hover { color: var(--accent); }
+  .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+  .form-group label {
+    font-family: 'Space Mono', monospace; font-size: 0.65rem;
+    letter-spacing: 0.15em; color: var(--accent); text-transform: uppercase;
+  }
+  .form-group input, .form-group select, .form-group textarea {
+    background: var(--card-bg); border: 1px solid var(--border);
+    padding: 0.9rem 1rem; color: var(--white);
+    font-family: 'DM Sans', sans-serif; font-size: 0.9rem; outline: none;
+    transition: border-color 0.2s;
+  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    border-color: var(--accent);
+  }
+  .form-group select option { background: var(--card-bg); }
+  .form-group textarea { resize: vertical; min-height: 120px; }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 1px solid var(--border); padding: 3rem 4vw;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 1rem;
+  }
+  .footer-copy {
+    font-family: 'Space Mono', monospace; font-size: 0.65rem;
+    color: var(--muted); letter-spacing: 0.1em;
+  }
+  .footer-links { display: flex; gap: 2rem; }
+  .footer-links a {
+    color: var(--muted); font-size: 0.75rem; text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--accent); }
+
+  /* ── NOTIFICATION ── */
+  .notif {
+    position: fixed; bottom: 2rem; right: 2rem; z-index: 9999;
+    background: var(--accent); color: var(--black);
+    padding: 1rem 1.5rem; font-size: 0.85rem; font-weight: 500;
+    transform: translateY(100px); transition: transform 0.4s;
+    max-width: 300px;
+  }
+  .notif.show { transform: translateY(0); }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .reveal {
+    opacity: 0; transform: translateY(30px);
+    transition: opacity 0.7s, transform 0.7s;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    #about { grid-template-columns: 1fr; }
+    .portfolio-grid { grid-template-columns: 1fr; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    #contact { grid-template-columns: 1fr; }
+    .brands-grid { grid-template-columns: repeat(3, 1fr); }
+    .faq-intro { grid-template-columns: 1fr; gap: 2rem; }
+    .work-row { grid-template-columns: repeat(2, 1fr); }
+    .hero-stats { gap: 2rem; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 540px) {
+    .brands-grid { grid-template-columns: repeat(2, 1fr); }
+    .work-row { grid-template-columns: 1fr; }
+    .hero-stats { flex-direction: column; gap: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">[ YourName · UGC ]</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#portfolio">Work</a></li>
+    <li><a href="#brands">Brands</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#newsletter">Learn</a></li>
+    <li><a href="#contact" class="nav-cta">Collab</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-noise"></div>
+  <div class="hero-tag">✦ UGC Creator & Content Strategist</div>
+  <h1 class="hero-h1">Content that <em>stops</em> the scroll. Brands that <em>sell.</em></h1>
+  <p class="hero-sub">I create raw, real, algorithm-approved content for brands that are done being invisible. Tech, skincare, travel, fashion — I make your product impossible to scroll past.</p>
+  <div class="hero-btns">
+    <a href="#portfolio" class="btn-primary">See the Work</a>
+    <a href="#contact" class="btn-outline">Let's Collab →</a>
+  </div>
+  <div class="hero-stats">
+    <div>
+      <div class="stat-num">47+</div>
+      <div class="stat-label">Brand Collabs</div>
+    </div>
+    <div>
+      <div class="stat-num">2.4M</div>
+      <div class="stat-label">Views Generated</div>
+    </div>
+    <div>
+      <div class="stat-num">4</div>
+      <div class="stat-label">Niches Covered</div>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">↓ Scroll to explore</div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span>Tech Reviews</span><span class="marquee-sep">·</span>
+    <span>Skincare Content</span><span class="marquee-sep">·</span>
+    <span>Travel & Hotels</span><span class="marquee-sep">·</span>
+    <span>Fashion</span><span class="marquee-sep">·</span>
+    <span>UGC Specialist</span><span class="marquee-sep">·</span>
+    <span>Brand Collab Open</span><span class="marquee-sep">·</span>
+    <span>Reels · TikTok · Shorts</span><span class="marquee-sep">·</span>
+    <span>Tech Reviews</span><span class="marquee-sep">·</span>
+    <span>Skincare Content</span><span class="marquee-sep">·</span>
+    <span>Travel & Hotels</span><span class="marquee-sep">·</span>
+    <span>Fashion</span><span class="marquee-sep">·</span>
+    <span>UGC Specialist</span><span class="marquee-sep">·</span>
+    <span>Brand Collab Open</span><span class="marquee-sep">·</span>
+    <span>Reels · TikTok · Shorts</span><span class="marquee-sep">·</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-img-wrap reveal">
+    <div class="about-img-placeholder">
+      <span class="img-icon">📸</span>
+      <span>Add Your Photo Here</span>
+      <span style="opacity:0.4;font-size:0.6rem;">Replace with your image</span>
+    </div>
+    <div class="about-corner">Available for Collabs</div>
+  </div>
+  <div class="about-text reveal">
+    <div class="section-tag">✦ About Me</div>
+    <h2 class="section-h2">I don't just make content.<br><em>I build trust.</em></h2>
+    <br>
+    <p>I'm a full-time UGC creator obsessed with the intersection of <strong>authenticity and conversion</strong>. While most creators chase trends, I study what actually makes people stop, watch, and buy.</p>
+    <p>From unboxing a new earphone to reviewing a $400 hotel suite — I bring the same energy to every frame: <strong>real reactions, cinematic quality, zero fluff.</strong> My content doesn't look like an ad. That's exactly the point.</p>
+    <p>Brands come to me when they're tired of generic content that performs like wallpaper. They leave with assets that <strong>keep working long after the campaign ends.</strong></p>
+    <div class="skills-list">
+      <span class="skill-tag">Short-form Video</span>
+      <span class="skill-tag">UGC Ads</span>
+      <span class="skill-tag">Product Reviews</span>
+      <span class="skill-tag">Reels & TikTok</span>
+      <span class="skill-tag">Brand Storytelling</span>
+      <span class="skill-tag">Lifestyle Content</span>
+      <span class="skill-tag">Photo Content</span>
+      <span class="skill-tag">Voiceover</span>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <div class="reveal">
+    <div class="section-tag">✦ Content Categories</div>
+    <h2 class="section-h2">Four niches.<br><em>One creator.</em></h2>
+    <p class="section-sub">Every category gets its own creative treatment. Deep research, genuine reactions, content built to convert in feed.</p>
+  </div>
+
+  <div class="portfolio-grid reveal" style="transition-delay:0.1s">
+
+    <!-- TECH -->
+    <div class="category-card">
+      <div class="cat-num">01 — Tech & Gadgets</div>
+      <div class="cat-icon">⚡</div>
+      <div class="cat-title">Tech Product Reviews</div>
+      <p class="cat-desc">Honest, hype-free takes on the gadgets people are actually Googling. From earphones to laptops — I review it the way your customer would. No jargon. Just vibes and specs that matter.</p>
+      <div class="cat-tags">
+        <span class="cat-tag">Unboxing</span>
+        <span class="cat-tag">Earphones & Audio</span>
+        <span class="cat-tag">Laptops</span>
+        <span class="cat-tag">Mobile</span>
+        <span class="cat-tag">Smart Home</span>
+      </div>
+      <div class="cat-arrow">↗</div>
+    </div>
+
+    <!-- SKINCARE -->
+    <div class="category-card">
+      <div class="cat-num">02 — Skincare</div>
+      <div class="cat-icon">✨</div>
+      <div class="cat-title">Skincare Brands</div>
+      <p class="cat-desc">Get-ready-with-me energy meets real skin results. I make skincare content that educates without lecturing and sells without sounding like it's selling. Before-after, routines, ingredient deep-dives.</p>
+      <div class="cat-tags">
+        <span class="cat-tag">GRWM</span>
+        <span class="cat-tag">Routine Videos</span>
+        <span class="cat-tag">Before / After</span>
+        <span class="cat-tag">Ingredient Reviews</span>
+        <span class="cat-tag">Sensitive Skin</span>
+      </div>
+      <div class="cat-arrow">↗</div>
+    </div>
+
+    <!-- TRAVEL -->
+    <div class="category-card">
+      <div class="cat-num">03 — Travel & Hotels</div>
+      <div class="cat-icon">🌍</div>
+      <div class="cat-title">Travel & Hotels</div>
+      <p class="cat-desc">Not another influencer posting sunsets. I document the actual experience — check-in impressions, room tours, hidden gems, and honest takes that inspire people to book right then and there.</p>
+      <div class="cat-tags">
+        <span class="cat-tag">Hotel Reviews</span>
+        <span class="cat-tag">Room Tours</span>
+        <span class="cat-tag">City Guides</span>
+        <span class="cat-tag">Travel Hacks</span>
+        <span class="cat-tag">Luxury & Budget</span>
+      </div>
+      <div class="cat-arrow">↗</div>
+    </div>
+
+    <!-- FASHION -->
+    <div class="category-card">
+      <div class="cat-num">04 — Fashion</div>
+      <div class="cat-icon">🎯</div>
+      <div class="cat-title">Fashion</div>
+      <p class="cat-desc">Outfit content that doesn't look like a catalogue. Try-ons, styling challenges, wardrobe essentials, seasonal picks — all shot with a genuine POV that makes followers actually want to shop.</p>
+      <div class="cat-tags">
+        <span class="cat-tag">Try-On Hauls</span>
+        <span class="cat-tag">Outfit Styling</span>
+        <span class="cat-tag">Seasonal Looks</span>
+        <span class="cat-tag">Sustainable Fashion</span>
+        <span class="cat-tag">OOTD</span>
+      </div>
+      <div class="cat-arrow">↗</div>
+    </div>
+
+  </div>
+
+  <!-- Work Samples -->
+  <div class="work-samples reveal" style="transition-delay:0.2s">
+    <div class="section-tag" style="margin-top:4rem">✦ Content Samples</div>
+    <p class="section-sub">Replace these placeholders with your actual video/image portfolio.</p>
+    <div class="work-row" style="margin-top:2rem">
+      <div class="work-card">
+        <div class="work-placeholder"><span class="icon">🎥</span><span>Tech Review</span></div>
+        <div class="work-overlay">View Content →</div>
+      </div>
+      <div class="work-card">
+        <div class="work-placeholder"><span class="icon">✨</span><span>Skincare GRWM</span></div>
+        <div class="work-overlay">View Content →</div>
+      </div>
+      <div class="work-card">
+        <div class="work-placeholder"><span class="icon">🌍</span><span>Hotel Tour</span></div>
+        <div class="work-overlay">View Content →</div>
+      </div>
+      <div class="work-card">
+        <div class="work-placeholder"><span class="icon">👗</span><span>Fashion Haul</span></div>
+        <div class="work-overlay">View Content →</div>
+      </div>
+      <div class="work-card">
+        <div class="work-placeholder"><span class="icon">📱</span><span>Product Ad</span></div>
+        <div class="work-overlay">View Content →</div>
+      </div>
+      <div class="work-card">
+        <div class="work-placeholder"><span class="icon">🎬</span><span>Brand Reel</span></div>
+        <div class="work-overlay">View Content →</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BRANDS -->
+<section id="brands">
+  <div class="reveal">
+    <div class="section-tag">✦ Brands Worked With</div>
+    <h2 class="section-h2">Trusted by brands<br><em>that care.</em></h2>
+    <p class="brands-note">Add your brand logos here — replace slots with actual brand partnerships</p>
+  </div>
+  <div class="brands-grid reveal" style="transition-delay:0.1s">
+    <div class="brand-slot">Brand 01</div>
+    <div class="brand-slot">Brand 02</div>
+    <div class="brand-slot">Brand 03</div>
+    <div class="brand-slot">Brand 04</div>
+    <div class="brand-slot">Brand 05</div>
+    <div class="brand-slot">Brand 06</div>
+    <div class="brand-slot">Brand 07</div>
+    <div class="brand-slot">Brand 08</div>
+    <div class="brand-slot">Brand 09</div>
+    <div class="brand-slot">Brand 10</div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="social-proof">
+  <div class="section-tag reveal">✦ What Brands Say</div>
+  <h2 class="section-h2 reveal">The results<br><em>speak louder.</em></h2>
+  <div class="testimonials-grid">
+    <div class="testi-card reveal">
+      <p class="testi-text">We briefed, they delivered in 48 hours. The content looked nothing like an ad — which is exactly why it performed like crazy. Our ROAS doubled on the UGC set.</p>
+      <div class="testi-author">— Marketing Manager, Tech Brand</div>
+    </div>
+    <div class="testi-card reveal" style="transition-delay:0.1s">
+      <p class="testi-text">I've worked with 20+ creators. This is the first time I felt like someone actually understood our product and our customer. The skincare video got 3x our average watch time.</p>
+      <div class="testi-author">— Founder, Skincare Label</div>
+    </div>
+    <div class="testi-card reveal" style="transition-delay:0.2s">
+      <p class="testi-text">The hotel room tour they created genuinely felt like what guests experience. We're still running it six months later and it keeps converting. Absolute must-book creator.</p>
+      <div class="testi-author">— Marketing Director, Boutique Hotel Group</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="faq-intro">
+    <div>
+      <div class="section-tag">✦ FAQ</div>
+      <h2 class="section-h2">Everything you<br>want to <em>know.</em></h2>
+    </div>
+    <p class="section-sub" style="margin-top:0;padding-top:1rem">Questions I get from brands, agencies, and curious people who found me through search. If yours isn't here — hit the contact form.</p>
+  </div>
+  <div class="faq-list reveal">
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        What is a UGC creator and why does my brand need one?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">A UGC (User Generated Content) creator makes authentic, native-looking content for your brand — the kind that performs in paid ads, organic feeds, and everywhere in between. Unlike influencer posts, UGC is designed for brands to own and repurpose. Studies show UGC converts 4x better than polished brand creative because it's built on trust, not production value.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        What types of brands do you work with?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">Tech products, skincare & beauty brands, travel destinations and hotels, and fashion labels. I've worked with startups, D2C brands, and regional agencies. If your product solves a real problem or makes someone's life better — I can make content that proves it.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        How is UGC content different from influencer marketing?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">Influencer marketing rents an audience. UGC gives you assets you own forever. I deliver raw files, hooks, voiceovers, and vertical cuts your team can plug into Meta, Instagram, YouTube Shorts, or TikTok ads. No follower count needed — the content itself is the product.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        How long does a typical collaboration take?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">Most UGC packages deliver within 5–10 business days after product receipt or brief approval. Rush turnarounds are available. I work with a clear brief process so there are no surprises — just clean deliverables on deadline.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Do you offer content for paid ads specifically?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">Yes — this is actually where I specialize. I structure every video with a tested hook, a value-clear middle, and a direct CTA built for conversion. You get multiple hook variations per deliverable so your media buyer can A/B test from day one.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        I'm an agency. Can I white-label or license the content?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">Absolutely. Agency packages include full usage rights, white-label options, and dedicated creator rates for ongoing volume. Reach out via the contact form and mention you're an agency — I'll respond within 24 hours with a tailored proposal.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        How can I learn UGC content creation myself?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">Sign up for the newsletter! I share weekly breakdowns of what's working in UGC content, how to pitch to brands, what gear you actually need, and how to turn your content into a career. No gatekeeping — just what I've learned from doing this full-time.</div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL LINKS -->
+<section id="socials">
+  <div class="reveal">
+    <div class="section-tag">✦ Find Me Online</div>
+    <h2 class="section-h2">Same energy,<br><em>every platform.</em></h2>
+    <p class="section-sub">Follow along for content drops, behind-the-scenes, and honest reviews you can trust. See the work in its natural habitat.</p>
+  </div>
+  <div class="social-wrap reveal" style="transition-delay:0.1s">
+    <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener" class="social-btn">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      Instagram
+    </a>
+    <a href="https://youtube.com/@yourhandle" target="_blank" rel="noopener" class="social-btn">
+      <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      YouTube
+    </a>
+    <a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener" class="social-btn">
+      <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      LinkedIn
+    </a>
+    <a href="https://facebook.com/yourhandle" target="_blank" rel="noopener" class="social-btn">
+      <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      Facebook
+    </a>
+    <a href="https://pinterest.com/yourhandle" target="_blank" rel="noopener" class="social-btn">
+      <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+      Pinterest
+    </a>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section id="newsletter">
+  <div class="section-tag">✦ Weekly Drops</div>
+  <h2 class="section-h2">Learn UGC.<br><em>For free.</em></h2>
+  <p class="section-sub">Every week I break down what's working in UGC content creation, how to land brand deals, what gear to buy, and how to price your services. No fluff. Just the playbook.</p>
+  <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+    <input type="email" placeholder="your@email.com" required name="email">
+    <button type="submit">Subscribe →</button>
+  </form>
+  <p class="newsletter-note">No spam. Unsubscribe anytime. Join 2,400+ aspiring creators.</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-info reveal">
+    <div class="section-tag">✦ Work Together</div>
+    <h2 class="section-h2">Let's build<br><em>something real.</em></h2>
+    <br>
+    <p>Whether you're a brand looking for scroll-stopping content, an agency sourcing UGC talent, or a company planning a campaign — I'm ready to talk. Tell me what you need. I'll tell you what's possible.</p>
+    <div class="contact-detail">
+      <span>Name</span>
+      <span>Your Name Here</span>
+    </div>
+    <div class="contact-detail">
+      <span>Email</span>
+      <a href="mailto:hello@yourdomain.com">hello@yourdomain.com</a>
+    </div>
+    <div class="contact-detail">
+      <span>WhatsApp / Phone</span>
+      <a href="tel:+91XXXXXXXXXX">+91 XXXX XXX XXX</a>
+    </div>
+    <div class="contact-detail">
+      <span>Based In</span>
+      <span>Delhi, India — Available Worldwide</span>
+    </div>
+    <div class="contact-detail">
+      <span>Response Time</span>
+      <span>Within 24 hours on business days</span>
+    </div>
+  </div>
+
+  <form class="contact-form reveal" style="transition-delay:0.1s" onsubmit="handleContact(event)">
+    <div class="form-row">
+      <div class="form-group">
+        <label>Your Name *</label>
+        <input type="text" placeholder="Full name" required>
+      </div>
+      <div class="form-group">
+        <label>Company / Brand</label>
+        <input type="text" placeholder="Company name">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Email Address *</label>
+        <input type="email" placeholder="work@email.com" required>
+      </div>
+      <div class="form-group">
+        <label>Phone / WhatsApp</label>
+        <input type="tel" placeholder="+91 XXXX XXX XXX">
+      </div>
+    </div>
+    <div class="form-group">
+      <label>I am a *</label>
+      <select required>
+        <option value="" disabled selected>Select your role</option>
+        <option>Brand / Company</option>
+        <option>Marketing Agency</option>
+        <option>PR Agency</option>
+        <option>Startup Founder</option>
+        <option>Fellow Creator</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Content Category Needed</label>
+      <select>
+        <option value="" disabled selected>Select category</option>
+        <option>Tech Product Reviews</option>
+        <option>Skincare & Beauty</option>
+        <option>Travel & Hotels</option>
+        <option>Fashion</option>
+        <option>Multiple / Custom Brief</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Tell Me About the Collab *</label>
+      <textarea placeholder="What's the product? What's the goal? What platforms? Any deadlines? Don't overthink it — just tell me what you're working on." required></textarea>
+    </div>
+    <button type="submit" class="btn-primary" style="align-self:flex-start">Send the Brief →</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-copy">© 2025 [Your Name] · UGC Creator Portfolio · All rights reserved</div>
+  <div class="footer-links">
+    <a href="#about">About</a>
+    <a href="#portfolio">Work</a>
+    <a href="#brands">Brands</a>
+    <a href="#contact">Contact</a>
+    <a href="#newsletter">Newsletter</a>
+  </div>
+</footer>
+
+<!-- NOTIFICATION -->
+<div class="notif" id="notif"></div>
+
+<script>
+// Scroll reveal
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// FAQ toggle
+function toggleFaq(btn) {
+  const item = btn.parentElement;
+  const wasOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if(!wasOpen) item.classList.add('open');
+}
+
+// Hamburger
+function toggleMenu() {
+  const nav = document.querySelector('.nav-links');
+  nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+  nav.style.flexDirection = 'column';
+  nav.style.position = 'absolute';
+  nav.style.top = '70px';
+  nav.style.right = '4vw';
+  nav.style.background = 'rgba(10,10,10,0.98)';
+  nav.style.padding = '1.5rem';
+  nav.style.borderTop = '1px solid rgba(200,169,110,0.2)';
+}
+
+// Notification helper
+function showNotif(msg) {
+  const n = document.getElementById('notif');
+  n.textContent = msg;
+  n.classList.add('show');
+  setTimeout(() => n.classList.remove('show'), 4000);
+}
+
+// Newsletter
+function handleNewsletter(e) {
+  e.preventDefault();
+  showNotif('🎉 You\'re in! First drop lands in your inbox soon.');
+  e.target.reset();
+}
+
+// Contact
+function handleContact(e) {
+  e.preventDefault();
+  showNotif('✅ Brief received! I\'ll respond within 24 hours.');
+  e.target.reset();
+}
+
+// Smooth close mobile nav on link click
+document.querySelectorAll('.nav-links a').forEach(a => {
+  a.addEventListener('click', () => {
+    const nav = document.querySelector('.nav-links');
+    if(window.innerWidth <= 900) nav.style.display = 'none';
+  });
+});
+</script>
+
+<!-- JSON-LD Structured Data for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Your Name",
+  "jobTitle": "UGC Creator & Content Strategist",
+  "description": "UGC creator specializing in tech product reviews, skincare brands, travel and hotels, and fashion content. Available for brand collaborations and paid campaigns.",
+  "url": "https://yourdomain.com",
+  "sameAs": [
+    "https://instagram.com/yourhandle",
+    "https://youtube.com/@yourhandle",
+    "https://linkedin.com/in/yourhandle"
+  ],
+  "knowsAbout": ["UGC Content Creation", "Tech Product Reviews", "Skincare Content", "Travel Content", "Fashion Content", "Brand Collaboration", "Influencer Marketing"],
+  "offers": {
+    "@type": "Service",
+    "name": "UGC Content Creation",
+    "description": "Authentic user generated content for brands across tech, skincare, travel, and fashion categories."
+  }
+}
+</script>
+
+</body>
+</html>
